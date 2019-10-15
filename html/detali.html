@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/detali.css">
+</head>
+<body>
+    <!-- 顶部 -->
+    <div id="top_all">
+            <div class="top public">
+                <div class="topLeft">
+                    <ul>
+                        <li><a href="#">考拉欢迎你!</a></li>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">免费注册</a></li>
+                        <li><a href="#">手机考拉</a></li>
+                    </ul>
+                </div>
+                <div class="topRight">
+                    <ul>
+                        <li><a href="#">每日签到</a></li>
+                        <li><a href="#">我的订单</a></li>
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">客户服务<img src="../images/111_03.jpg" alt=""></a></li>
+                        <li><a href="#">充值中心<img src="../images/111_03.jpg" alt=""></a></li>
+                        <li><a href="#">消费者权益<img src="../images/111_03.jpg" alt="" class="liimg1"></a></li>
+                        <li><a href="#">登录<img src="../images/111_03.jpg" alt="" class="liimg2"></a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- logo板块 -->
+        <div id="logo_all">
+            <div class="logo public">
+                <!-- logo区 -->
+                <div class="log">
+                    <img src="../images/2_03.jpg" alt="">
+                </div>
+                <!-- 中间搜索框 -->
+                <div class="input">
+                    <p>
+                        <label for="inp"><img src="../images/3_03.jpg" alt=""></label>
+                        <input type="text" placeholder="飞利浦电动牙刷" id="inp">  
+                    </p>
+                    <h2>
+    
+                    </h2>               
+                </div>
+                <!-- 购物车 -->
+                <div class="shoppingCar">
+                    <img src="../images/5.png" alt="">
+                    <a href="#">购物车</a>
+                </div>
+                <!-- 导航1 -->
+                <div class="nav1">
+                    <ul>
+                        <li><a href="#" class="nav1_a1">首页</a></li>
+                        <li><a href="#">今日限购</a></li>
+                        <li><a href="#">每日上新</a></li>
+                        <li><a href="#">国家馆</a></li>
+                        <li><a href="#">海外旗舰</a></li>
+                        <li><a href="#">工厂店</a></li>
+                        <li><a href="#">品质奶粉</a></li>
+                        <li><a href="#">人气面膜</a></li>
+                        <li><a href="#">充值</a></li>
+                    </ul>
+                </div>
+                <!-- 导航2 -->
+                <div class="nav2">
+                    <p>所有分类</p>
+                    <ul class="nav2_ul">
+                            <li><a href="#"><span></span>美容彩妆<b></b></a></li>
+                            <li><a href="#"><span></span>母婴儿童<b></b></a></li>
+                            <li><a href="#"><span></span>营养保健<b></b></a></li>
+                            <li><a href="#"><span></span>数码家电<b></b></a></li>
+                            <li><a href="#"><span></span>个人洗护<b></b></a></li>
+                            <li><a href="#"><span></span>服饰鞋靴<b></b></a></li>
+                            <li><a href="#"><span></span>运动户外<b></b></a></li>
+                            <li><a href="#"><span></span>手表配饰<b></b></a></li>
+                            <li><a href="#"><span></span>轻奢</a><b></b></li>
+                            <li><a href="#"><span></span>家具生活<b></b></a></li>
+                            <li><a href="#" class="banner_ul_a9"><span></span>环球美食<b></b></a></li>
+                        </ul> 
+                </div>             
+            </div>
+        </div>
+    <!-- 功能选择区  -->
+    <div class="select public">
+        <h2>美容护肤 ></h2>
+        <h3>面部护肤 </h3><span>></span>
+        <h4>面膜/面膜粉</h4> <span>></span>
+        <h5>WIS</h5> <span>></span>
+        <h6>【明星推荐</h6>
+    </div> 
+    <!-- 详细信息    -->
+    <div class="detali public">
+        <div class="detaliLeft">
+            <img src="../images/detali01.jpg" alt="" class="detaliLeft02">
+            <div class="detaliLeft01">
+                <img src="../images/detali01.jpg" alt="">
+                <img src="../images/detali01.jpg" alt="">
+                <img src="../images/detali01.jpg" alt="">
+                <img src="../images/detali01.jpg" alt="">
+            </div>
+            <div class="fangdajing">
+                <img src="../images/detali01.jpg" alt="" class="fangdajing01">
+            </div>
+            <div class="shadow">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 放大镜功能
+    //获取元素
+    var detaliLeft02=document.querySelector(".detaliLeft02");
+    var detaliLeft=document.querySelector(".detaliLeft");
+    var shadow=document.querySelector(".shadow");
+    var fangdajing01=document.querySelector(".fangdajing01");
+    var fangdajing=document.querySelector(".fangdajing");
+
+
+    //获取对应距离，宽高
+    var detaliLeft02Width=400;
+    var detaliLeft02Height=400;
+
+    var detaliLeft02Left=208.5;
+    var detaliLeft02Top=273;
+
+    var maxX=200;
+    var maxY=200;
+
+    //给detaliLeft02添加事件
+    detaliLeft.onmousemove=function(e){
+        fangdajing.style.display="block"
+        var e=e||window.event;
+        console.log("e.clientX"+e.clientX,"e.offsetY"+e.pageY)
+
+        //确定x，y的值
+        var x=e.clientX-208.5-100;
+        var y=e.pageY-272-100;
+        console.log(x,y)
+        if(x<=0){
+            x=0
+        };
+        if(y<=0){
+            y=0
+        };
+        if(x>=maxX){
+            x=maxX
+        };
+        if(y>=maxY){
+            y=maxY
+        }
+
+        shadow.style.left=x+"px";
+        shadow.style.top=y+"px";
+
+        fangdajing01.style.left=-(x*2)+"px";
+        fangdajing01.style.top=-(y*2)+"px";
+    }
+
+    // detaliLeft02.onmouseout=function(){
+    //     fangdajing.style.display="none"
+    // }
+
+
+
+</script>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/ajax.js"></script>
+</head>
+
+<body>
+    <!-- logo板块 -->
+    <div id="logo_all">
+        <div class="logo public">
+            <!-- logo区 -->
+            <div class="log">
+                <img src="../images/2_03.jpg" alt="">
+            </div>
+            <div class="logo01">
+
+            </div>
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <div id="contAll">
+        <div class="cont public">
+            <div class="cont01">
+
+            </div>
+            <div class="cont02">
+                <div class="login01">
+                    <b>欢迎注册</b>
+                    <p>
+                        <span>已有账号？</span>
+                        <a href="#">去登录</a>
+                    </p>
+                </div>
+                <div class="login02">
+                    <input type="text" name="" id="user" placeholder="请输入手机号" maxlength="11">
+                    <div class="login02_inp01">
+                        <input type="text" name="" id="code" placeholder="请输入短信验证码" maxlength="4">
+                        <div class="login02_inp01_01">
+                            获取验证码
+                        </div>
+                    </div>
+                    <input type="text" name="" id="pwd" placeholder="密码">
+                    <div class="check">不能为空</div>
+                    <button class="register">注册</button>
+                    <div class="login02_01">
+                        <input type="checkbox" name="" id="">
+                        <a href="#">我同意服务条款和有关考拉隐私合同相关服务</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <footer>
+            <div class="foot public">
+                <h2>隐私政策-考拉海购</h2>
+                <h3>正值电信许可经营无服务可证书：浙B</h3>
+                <h4>浙公网安备33012312452142号 阿里巴巴所有版权2003-0202</h4>
+                <img src="../images/foot02_03.jpg" alt="">
+            </div>
+        </footer>
+</body>
+<script>
+    // 登录验证
+    //1、获取元素
+    var user = document.querySelector("#user");
+    var pwd = document.querySelector("#pwd");
+    var check = document.querySelector(".check");
+    var checkCode = document.querySelector(".login02_inp01_01");
+    var register = document.querySelector(".register");
+    var code = document.querySelector("#code");
+
+
+    //2、用户名添加事件判断
+    user.oninput = function () {
+        user.flage = false;
+        var userInp = user.value;
+        var reg = /^[1][0-9]{10}$/;
+        var result = reg.test(userInp);
+        console.log(result)
+        if (result) {
+            check.innerHTML = "手机号正确"
+            user.flage = true;
+        } else {
+            check.innerHTML = "手机号格式错误"
+        }
+    }
+    //3、密码框判断
+    pwd.oninput = function () {
+        pwd.flage=false;
+        var pwdInp = pwd.value;
+        if (pwdInp.length > 5) {
+            check.innerHTML = "密码格式正确"
+            pwd.flage=true;
+        } else {
+            check.innerHTML = "密码不能少于6位数"
+        }
+    }
+
+    //4、随机生成、验证码判断
+    window.onload = function () {
+        var str = "";
+        var code = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        for (var i = 0; i < 4; i++) {
+            var num = Math.round(Math.random() * 61);
+            str += code[num];
+        }
+        checkCode.innerHTML = str
+    };
+    
+    //这里有 bug 点击时 验证码会出重复出现不会覆盖
+    checkCode.onclick = function () {
+        var str = "";
+        console.log(this)
+        var code = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        for (var i = 0; i < 4; i++) {
+            var num = Math.round(Math.random() * 61);
+            str += code[num];
+        }
+        checkCode.innerHTML= "";
+        checkCode.innerHTML= str;
+    };
+    // checkCode.onclick();    这里可以加载时自动点击一下，就不需要 用window.onload了
+ 
+    code.oninput = function () {
+        code.flage=false;
+        var codeInp=code.value;
+        if(str==codeInp){
+            check.innerHTML = "验证码正确";
+            code.flage=true;
+        }else{
+            check.innerHTML = "验证码错误"
+        }
+    }
+
+
+
+
+    //5、给按钮添加点击事件，进行请求，判断数据库
+    register.onclick = function () {
+        var phoneInp = user.value;
+        var pwdInp = pwd.value;
+        var codeInp=code.value;
+
+        if(phoneInp&&pwdInp&&codeInp){
+            if(pwd.flage&&code.flage&&pwd.flage){
+                ajax({
+                    type: "get",
+                    url: "../php/register.php",
+                    data: {
+                        phone: phoneInp,
+                        pwd: pwdInp
+                    },
+                    dataType: "json",
+                    success: function (res) {
+                        console.log(res)
+                        check.innerHTML = res["msg"]
+                    }
+                })
+            }else{
+                check.innerHTML = "手机号/验证码/密码错误"
+            }
+
+        }else{
+            check.innerHTML = "手机号/验证码/密码不能为空"
+        }
+    }
+
+
+
+
+</script>
+
+</html>

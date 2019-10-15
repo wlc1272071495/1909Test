@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <!-- logo板块 -->
+    <div id="logo_all">
+        <div class="logo public">
+            <!-- logo区 -->
+            <div class="log">
+                <img src="../images/2_03.jpg" alt="">
+            </div>
+            <div class="logo01">
+
+            </div>           
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <div id="contAll">
+        <div class="cont public">
+            <div class="cont01">
+
+            </div>
+            <div class="cont02">
+                <div class="login01">
+                    <a href="#">手机号登录</a>                   
+                    <a href="#">邮箱登录</a>
+                </div>
+                <div class="login02">
+                    <input type="text" name="" id="user" placeholder="请输入手机号" maxlength="11">
+                    <input type="text" name="" id="pwd" placeholder="密码">
+                    <h6 class="check">不能为空</h6>
+                    <button>登录</button>
+                    <div class="login02_01">
+                        <input type="checkbox" name="" id="">
+                        <span>10天免登录</span>
+                        <a href="#">忘记密码?</a>
+                    </div>
+                    <p>
+                        <span>登录即代表您已同意相关</span>
+                        <b>"隐私权相关政策"</b>
+                    </p>
+                </div>
+                <div class="login03">
+                    <a href="#">手机快捷注册 > </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+        <div class="foot public">
+            <h2>隐私政策-考拉海购</h2>
+            <h3>正值电信许可经营无服务可证书：浙B</h3>
+            <h4>浙公网安备33012312452142号 阿里巴巴所有版权2003-0202</h4>
+            <img src="../images/foot02_03.jpg" alt="">
+        </div>
+    </footer>
+</body>
+<script>
+    // 登录验证
+    //1、获取元素
+    var user=document.querySelector("#user");
+    var pwd=document.querySelector("#pwd");
+    var check=document.querySelector(".check");
+
+    //2、用户名添加事件判断
+    user.oninput=function(){
+        var userInp=user.value;
+        var reg=/^[1][0-9]{10}$/;
+        var result=reg.test(userInp);
+        console.log(result)
+        if(result){
+            check.innerHTML="手机号正确"
+        }else{
+            check.innerHTML="手机号格式错误"
+        }
+    }
+    
+
+
+
+
+
+
+</script>
+</html>

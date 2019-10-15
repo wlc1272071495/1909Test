@@ -1,0 +1,51 @@
+/* 公共部分 */
+.public{margin:0 auto;width: 1102px;}
+
+/* logo板块 */
+#logo_all{height: 100px;border-bottom: 1px solid #ccc;background-color: #fff;}
+.logo{height: 100px;position: relative;}
+.log{float: left;margin-left: 5px;margin-right: 130px;}
+.log img{margin-top: 20px;}
+.logo01{width: 504px;height: 100px;float: right;background: url(../images/logobgc01.png) no-repeat;margin-right: 80px;}
+
+/* 内容区 */
+#contAll{height: 600px;border-bottom:1px solid #ccc;background-color: rgba(241, 238, 238, 0.945);}
+.cont{height: 600px;}
+
+.cont01{width: 400px;height: 203px;background: url(../images/cont01.png) no-repeat;float: left;margin-top: 200px;}
+
+.cont02{width: 350px;height: 354px;float: right;margin-top: 150px;margin-right: 30px;border:1px solid #ccc;}
+.login01{line-height: 50px;text-align: center;height: 50px;}
+.login01 a{display: block;height: 50px;float: left;width: 174px;font-size: 16px;font-weight: 600;color: #000}
+.login01 a:hover{color: red;}
+.login01 a:first-child{border-right: 1px solid #ccc;color: red;}
+.login02{width: 350px;height: 245px;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;background-color: #fff;}
+.login02 input{display: block;width: 248px;height: 34px;margin: 0 auto;padding-left: 20px}
+.login02 #user{margin-top: 20px;}
+.login02 #pwd{margin-top: 16px;margin-bottom: 12px;}
+.login02 h6{font-size: 12px;line-height: 12px;color: red;margin-left: 40px;margin-bottom: 8px;}
+.login02 button{display: block;width: 270px;height: 36px;background-color: rgb(240, 52, 52);border: 0;margin: 0 auto;color: #fff;}
+.login02 button:hover{background-color: rgb(250, 137, 137);}
+.login02_01{margin-top: 10px;}
+.login02_01 input{display: block;height: 14px;width: 14px;float: left;background-color: #fff;margin-left: 40px;margin-right: 5px;}
+.login02_01 a{float: right;margin-right: 40px;color: rgba(117, 115, 115, 0.438)}
+.login02 p{color: rgb(185, 177, 177);margin-top: 15px;}
+.login02 p span{margin-left: 40px;}
+.login02 p b{text-decoration: underline}
+.login03 {width: 350px;height: 40px;line-height: 40px}
+.login03 a{float: right;color: red;font-size: 16px}
+
+
+/* 底部 */
+footer{height: 152px;background-color: #fff;}
+.foot{height: 152px;text-align: center;overflow: hidden;color: #000}
+.foot h2{margin-top: 24px;margin-bottom: 7px;}
+.foot h3{margin-top: 14px;margin-bottom: 8px;}
+.foot h4{margin-bottom: 10px;}
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+{
+  "id": "1457745",
+  "name": "kaola_index",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "554433",
+      "name": "旗帜",
+      "font_class": "iconset03100",
+      "unicode": "e717",
+      "unicode_decimal": 59159
+    },
+    {
+      "icon_id": "1020838",
+      "name": "app",
+      "font_class": "app",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "1380080",
+      "name": "购物车",
+      "font_class": "icon-test",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "2121746",
+      "name": "分类",
+      "font_class": "fenlei",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "10707179",
+      "name": "箭头 上 up",
+      "font_class": "jiantoushang",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    }
+  ]
+}
